@@ -76,7 +76,7 @@ const NavLinks = () => {
           transition={{ delay: 2.1, duration: 0.5, type: "spring" }}
         >
           {/* Light/Dark mode toggle */}
-          <LightDarkToggle />
+          {/* <LightDarkToggle /> */}
         </motion.div>
       </nav>
     </>

@@ -38,6 +38,8 @@ const AboutMe = ({ name }) => {
     animate: { y: 0, opacity: 1 },
   };
 
+  const resumeLink = "https://drive.google.com/file/d/1QTtEVpDTNBOzEeHOx2wMEUnPawrCe5YE/view?usp=drive_link"
+
   return (
     <section className="about">
       <AnimatedBackground animationName="neuralNetwork"/>
@@ -84,10 +86,18 @@ const AboutMe = ({ name }) => {
                 
               </motion.div>
 
-              {/* Button to view the portfolio */}
-              <NavLink to="/portfolio">
-                <Button name="View Portfolio" />
-              </NavLink>
+              <div className="flex-row" style={{display: 'flex', placeContent: 'space-evenly'}}>
+                {/* Button to view the portfolio */}
+                <NavLink to="/portfolio">
+                  <Button name="View Portfolio" />
+                </NavLink>
+
+                {/* Button to view the Resume */}
+                <a href={resumeLink} target="_blank">
+                  <Button name="View Resume" />
+                </a>
+              </div>
+              
             </motion.div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero";
-import Draw from "../../components/Draw";
 import { AnimatedBackground } from "animated-backgrounds"
+import Button from "../../components/Button"
 
 /**
  * Represents the Landing page component.
@@ -20,6 +20,7 @@ const Landing = ({ name }) => {
       alignItems: "center",
     },
   };
+
 
   return (
     <>

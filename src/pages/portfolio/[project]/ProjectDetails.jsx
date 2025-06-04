@@ -7,6 +7,7 @@ import Button from "../../../components/Button";
 import Image from "../../../components/Image";
 import projects from "../../../_data/projects.json";
 import Footer from "../../../components/Footer";
+import { AnimatedBackground } from "animated-backgrounds";
 
 /**
  * Represents the ProjectDetails page component.
@@ -38,13 +39,14 @@ const ProjectDetails = () => {
   return (
     <>
       <main className="container portfolio">
+        <AnimatedBackground animationName="neuralNetwork"/>
         {/* Display the page header with project title and description */}
         <PageHeader title={project.title} description={project.description} />
         <div className="projectDetails">
           <div className="row">
             <div className="col-12 col-xl-4 projectImage">
               {/* Display the project image */}
-              <Image src={project.image2} alt={project.name} opacity="0.5" />
+              <Image src={project.image2} alt={project.name}/>
             </div>
             <div className="col-12 col-xl-8 projectBodyContainer">
               <div className="tech">
@@ -84,9 +86,9 @@ const ProjectDetails = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: project.body.split("\n").length * 0.3 }}
               >
-                <a href={project.github}>
+                {/* <a href={project.github}>
                   <Button name="View Code" />
-                </a>
+                </a> */}
                 <a href={project.deployed}>
                   <Button name="View Site" />
                 </a>

@@ -177,11 +177,7 @@
 
   .projectCard:hover .imageContainer img {
     scale: 1.4;
-  }
-
-  .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
+    
   }
 
   .textWrap {

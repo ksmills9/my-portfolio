@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import landingImage from "../images/me.png";
 import SocialIcons from "./SocialIcons";
+import Button from "./Button"
 
 /**
  * Represents the hero section of the page.
@@ -38,6 +39,9 @@ const Hero = ({ name }) => {
       paddingBottom: "28px",
     },
   };
+
+  const resumeLink = "https://drive.google.com/file/d/1QTtEVpDTNBOzEeHOx2wMEUnPawrCe5YE/view?usp=drive_link";
+
   return (
     <>
       <div className="textContainer" style={styles.textContainer}>
@@ -69,6 +73,15 @@ const Hero = ({ name }) => {
             }}
           />
         </motion.div>
+        <motion.div
+          initial={{ y: +100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.4, type: "spring" }}
+          style={{alignSelf: "center"}}>
+          <a href={resumeLink} target="_blank">
+            <Button name="View Resume" />
+          </a>
+        </motion.div>
       </div>
       {/* Animated landing image */}
       <div className="image-container">
@@ -79,7 +92,7 @@ const Hero = ({ name }) => {
           transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
           style={styles.landingImage}
           src={landingImage}
-          alt="Michael Yeates"
+          alt="Kevin Sunkwa-Mills"
         />
       </div>
       {/* Displaying social icons */}

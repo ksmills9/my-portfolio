@@ -40,7 +40,7 @@ const SocialIcons = () => {
           transition={{ delay: 1.7, duration: 0.5, type: "spring" }}
           className="fa-brands fa-linkedin"
           aria-hidden="true"
-          title="Michael Yeates' LinkedIn Profile"
+          title="Kevin Sunkwa-Mills' LinkedIn Profile"
         ></motion.i>
       </a>
     </div>
