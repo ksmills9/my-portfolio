@@ -43,7 +43,7 @@ const Form = () => {
     email: "",
     subject: "",
     message: "",
-    access_key: process.env.REACT_APP_ACCESS_KEY,
+    access_key: "a4ff890c-d5ab-4377-9440-3bc35d3a7fd2",
   });
 
   // Handle input change

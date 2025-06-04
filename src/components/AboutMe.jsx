@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
-import aboutMeImg from "../images/aboutme.jpeg";
+import aboutMeImg from "../images/kevin-profile.jpeg";
+import { AnimatedBackground } from "animated-backgrounds";
 
 /**
  * Represents the About Me section.
@@ -39,6 +40,7 @@ const AboutMe = ({ name }) => {
 
   return (
     <section className="about">
+      <AnimatedBackground animationName="neuralNetwork"/>
       <div className="aboutContainer container">
         <div className="row">
           <motion.div
@@ -55,8 +57,8 @@ const AboutMe = ({ name }) => {
           <div className="personalInfo col-12 col-lg-6">
             <motion.div className="contentContainer" variants={staggerVariants}>
               {/* Display greeting and job title with animation */}
-              <motion.h4 variants={paragraphVariants}>Nice to meet you! 👋🏻</motion.h4>
-              <motion.h5 variants={paragraphVariants}>I'm a Software Engineer at COMPANY.</motion.h5>
+              <motion.h4 variants={paragraphVariants}>Hi! i'm Kevin! 👋🏻</motion.h4>
+              <motion.h5 variants={paragraphVariants}>I'm a Full Stack Software Engineer with the drive to create novel solutions to complex problems.</motion.h5>
 
               {/* Display content description with animation */}
               <motion.div
@@ -67,22 +69,19 @@ const AboutMe = ({ name }) => {
               >
                 {/* Paragraphs with animation */}
                 <motion.p variants={paragraphVariants}>
-                  Today, I find myself knee-deep in an exhilarating chapter of my journey as a POSITION at the tech
-                  titan, <span style={{ color: "var(--hl-color)" }}> COMPANY</span>. My playground? The captivating
-                  universe of <span style={{ color: "var(--hl-color)" }}> DEPARTMENT</span>.
+                  I'm a full stack software developer with a strong foundation in building responsive, scalable 
+                  applications across web and mobile platforms. I specialize in using modern technologies like 
+                  Angular, .NET, React, Node.js, and SQL to deliver clean, efficient code and robust user experiences.
                 </motion.p>
-                <br />
+                  <br/>
                 <motion.p variants={paragraphVariants}>
-                  Here, I don my <span style={{ color: "var(--hl-color)" }}> problem-solving </span>
-                  cape and dive headfirst into real-world challenges, all while relentlessly pursuing a{" "}
-                  <span style={{ color: "var(--hl-color)" }}> DEGREE NAME</span> degree from the UNIVERSITY. So here I
-                  am, juggling bits of binary and real-life conundrums, all while crafting my own success story.
+                  I'm experienced in both frontend and backend development, with a focus on performance optimization, 
+                  system reliability, and intuitive design. My workflow is rooted in Agile methodologies, and I 
+                  regularly work with tools like Cypress for automated testing, Azure DevOps for CI/CD pipelines, 
+                  and Firebase for cloud integration. I’m passionate about writing maintainable code, improving development 
+                  processes, and collaborating with cross-functional teams to turn complex problems into practical solutions.
                 </motion.p>
-                <br />
-                <motion.p variants={paragraphVariants}>
-                  Life is a kaleidoscope of experiences, far beyond the confines of work. When code isn't my focus, I'm
-                  conquering HOBBY, HOBBY, and fueling my love for HOBBY.
-                </motion.p>
+                
               </motion.div>
 
               {/* Button to view the portfolio */}

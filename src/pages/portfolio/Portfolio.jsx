@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
 import ProjectList from "../../components/ProjectList";
 import Footer from "../../components/Footer";
+import { AnimatedBackground } from "animated-backgrounds";
 
 /**
  * Represents the Portfolio page component.
@@ -24,6 +25,7 @@ const Portfolio = () => {
     <>
       {/* Main Portfolio Page */}
       <main className="portfolio container">
+      <AnimatedBackground animationName="neuralNetwork"/>
         {/* Display the page header */}
         <PageHeader title="Portfolio" description="View my work" />
 

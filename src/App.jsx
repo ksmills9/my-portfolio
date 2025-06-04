@@ -11,6 +11,7 @@ import ProjectDetails from "./pages/portfolio/[project]/ProjectDetails";
 import Resume from "./pages/resume/Resume";
 import Contact from "./pages/contact/Contact";
 import PageNotFound from "./pages/404/PageNotFound";
+import AboutMe from "./components/AboutMe";
 
 /**
  * Instructions for Customizing the Portfolio
@@ -42,13 +43,13 @@ function App() {
     location: "Calgary, Canada",
     email: "ksmills10@gmail.com",
     brand:
-      "My unique blend of technical expertise, creative thinking, and background in psychology allows me to approach each project with a deep understanding of the end user's perspective, resulting in highly effective user-centred digital products.",
+      "I’m a driven software engineer with a passion for understanding how things work, relentlessly digging into root causes to craft elegant, efficient, and effective software solutions.",
   };
 
   const location = useLocation();
 
   // State to manage loader visibility
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
 
   const [originalTitle, setOriginalTitle] = useState();
 
@@ -64,17 +65,17 @@ function App() {
     }
 
     // Handle document title change when tab visibility changes
-    const handleTabChange = () => {
-      if (document.hidden) {
-        document.title = "👋🏻 Git pulling you back in!";
-      } else {
-        document.title = originalTitle;
-      }
-    };
+    // const handleTabChange = () => {
+    //   if (document.hidden) {
+    //     document.title = "👋🏻 Git pulling you back in!";
+    //   } else {
+    //     document.title = originalTitle;
+    //   }
+    // };
 
-    // Listen for visibility change events
-    window.addEventListener("visibilitychange", handleTabChange);
-    return () => window.removeEventListener("visibilitychange", handleTabChange);
+    // // Listen for visibility change events
+    // window.addEventListener("visibilitychange", handleTabChange);
+    // return () => window.removeEventListener("visibilitychange", handleTabChange);
   }, [location, originalTitle]);
 
   return (
@@ -89,7 +90,7 @@ function App() {
           {/* Define routes */}
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Landing name={personalDetails.name} tagline={personalDetails.tagline} />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<AboutMe />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/resume" element={<Resume brand={personalDetails.brand} />} />
 

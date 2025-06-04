@@ -2,6 +2,7 @@ import PageHeader from "../../components/PageHeader";
 import Form from "../../components/Form";
 import ContactInfo from "../../components/ContactInfo";
 import Footer from "../../components/Footer";
+import { AnimatedBackground } from "animated-backgrounds";
 
 /**
  * Represents the Contact page component.
@@ -18,6 +19,7 @@ const Contact = ({ name, email, location }) => {
     <>
       {/* Main Contact Page */}
       <main className="contact container">
+      <AnimatedBackground animationName="neuralNetwork"/>
         {/* Display the page header */}
         <PageHeader title="Contact" description="Get in touch" />
 

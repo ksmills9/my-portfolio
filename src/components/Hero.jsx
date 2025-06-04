@@ -75,7 +75,7 @@ const Hero = ({ name }) => {
         <motion.img
           className="landingImage"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.25 }}
+          animate={{ opacity: 0.9 }}
           transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
           style={styles.landingImage}
           src={landingImage}

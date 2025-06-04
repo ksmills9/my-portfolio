@@ -23,7 +23,7 @@
   z-index: 50;
   border-radius: 250px;
   border: 1px solid var(--hl2-color);
-  opacity: 0.5;
+  opacity: 1.0;
   padding: 10px;
   filter: contrast(1.2);
 }
